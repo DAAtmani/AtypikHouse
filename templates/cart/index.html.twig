@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Carte
+{% endblock %}
+
+{% block body %}
+	<section class="about-banner relative">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1 class="text-white">
+						CARTE
+					</h1>
+					<p class="text-white link-nav">
+						<a>ACCUEIL
+						</a>
+						<span class="lnr lnr-arrow-right"></span>
+						<a>
+							CARTE</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<div class="l">
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">produit</th>
+					<th id="a" scope="col">prix</th>
+
+				</tr>
+			</thead>
+		</div>
+		<tbody>
+			{% for produit in cart %}
+
+				<tr>
+					<th scope="row">*</th>
+					<td width="120px"><img width="120px" src={{ produit.produit.photo }} alt=""></td>
+					<td class="prix">{{ produit.produit.prix }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<form action="/reservation" method="POST">
+		<button type="submit" id="checkout-button">payer</button>
+	</form>
+{% endblock %}
+
+{% block script %}
+	<script type="text/javascript">
+		var stripe = Stripe('pk_test_51LFw24JQxZaD2TQsDfywnapeyw3UYeRLZ1l35L5OA2TaYbxOj98xyGQ1W2W6JOqxG82bd2BfOK3P48bE7UzEjcRX0065CA4FZd');
+var checkoutButton = document.getElementById("checkout-button");
+checkoutButton.addEventListener("click", function () {
+fetch("/stripe", {method: "POST"}).then(function (response) {
+return response.json();
+}).then(function (session) {
+
+return stripe.redirectToCheckout({sessionId: session.id});
+}).then(function (result) {
+// If redirectToCheckout fails due to a browser or network
+// error, you should display the localized error message to your
+// customer using error.message.
+if (result.error) {
+alert(result.error.message);
+}
+}).catch(function (error) {
+console.error("Error:", error);
+});
+});
+	</script>
+{% endblock %}

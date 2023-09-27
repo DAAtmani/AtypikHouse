@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+	Page produit
+{% endblock %}
+{% block body %}
+
+	<div>
+		<class="ayman">
+			<img src={{asset(produits.photo)}} alt="">
+
+			<p>
+				{{produits.prix }}
+				$
+			</p>
+		</div>
+		<div class="show1">
+			<h1>
+				chez :
+				{{produits.user.prenom}}
+			</h1>
+
+			<div class="produit"></div>
+			<p>
+				arriver :
+			</p>
+			<p>
+				{{produits.ariver | date('j/m/y') }}
+			</p>
+			<p class="depart1">depart :
+			</p>
+
+
+			<p class="depart">
+				{{produits.depart | date('j/m/y') }}
+			</p>
+
+			<div class="anas">
+
+				<br>
+				nombre de personne :
+
+
+			</div>
+		</div>
+
+
+		<a href="{{path('add_cart',{'id':produits.id})}} ">
+			<button class="favorite" type="button">
+				reserver
+			</button>
+
+
+		{% endblock %}

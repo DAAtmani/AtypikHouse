@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello InscriptionU
+{% endblock %}
+
+{% block body %}
+	<section class="about-banner relative">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1 class="text-white">
+						INSCRIPTION
+					</h1>
+					<p class="text-white link-nav">
+						<a>ACCUEIL
+						</a>
+						<span class="lnr lnr-arrow-right"></span>
+						<a>
+							INSCRIPTION</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<div id="container">
+
+		<h1 class="h3 mb-3 font-weight-normal">INSCRIPTION
+			<h5>
+				Inscription en tant que propriétaire       |
+			</br>
+			<a href="/inscriptionuser">
+				Inscription en tant que client
+			</a>
+
+		</h5>
+		{{form(form)}}
+
+		</form>
+	</div>
+</form></div>{% endblock %}

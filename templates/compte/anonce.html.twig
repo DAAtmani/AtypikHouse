@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Annonce
+{% endblock %}
+
+{% block body %}
+	<section class="about-banner relative">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1 class="text-white">
+						ANNONCES
+					</h1>
+					<p class="text-white link-nav">
+						<a>ACCUEIL
+						</a>
+						<span class="lnr lnr-arrow-right"></span>
+						<a>
+							ANNONCES</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<h1>
+		cree une anonce
+	</h1>
+	{{form(formcompte)}}{% endblock %}

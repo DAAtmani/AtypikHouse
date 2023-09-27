@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produits
+{% endblock %}
+
+{% block body %}
+<section class="about-banner relative">
+	<div class="overlay overlay-bg"></div>
+	<div class="container">
+		<div class="row d-flex align-items-center justify-content-center">
+			<div class="about-content col-lg-12">
+				<h1 class="text-white">
+					CONTACT
+				</h1>
+				<p class="text-white link-nav">
+					<a>ACCUEIL
+					</a>
+					<span class="lnr lnr-arrow-right"></span>
+					<a>
+						CONTACT</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="popular-destination-area section-gap">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="menu-content pb-70 col-lg-8">
+				<div class="title text-center">
+					<h1 class="mb-10">Nos produits</h1>
+
+				</div>
+			</div>
+		</div>
+		<div class="ayman">
+			{% for produit in produits %}
+
+				<a href=" {{path('ap',{'id':produit.id})}}">
+					<img src={{asset(produit.photo)}} </a> {% endfor %} </div> {% endblock %}

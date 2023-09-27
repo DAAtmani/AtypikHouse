@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CompteP
+{% endblock %}
+
+{% block body %}
+	<section class="about-banner relative">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1 class="text-white">
+						MON COMPTE
+					</h1>
+					<p class="text-white link-nav">
+						<a>ACCUEIL
+						</a>
+						<span class="lnr lnr-arrow-right"></span>
+						<a>
+							MON COMPTE</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<h1>
+		Mon compte
+	</h1>
+	Bienvenue
+	{{ app.user.prenom }}
+	dans votre compte
+
+	<a href="/anonce">Création d'une annonce
+	</a>
+	<br>
+	<p>
+		Voir toute mes
+		<a href="/mesreservation">
+			réservations</a>
+	</p>
+
+
+{% endblock %}

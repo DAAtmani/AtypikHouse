@@ -1,0 +1,268 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil
+{% endblock %}
+
+{% block body %}<!-- acceuil section -->
+<!-- start banner Area --><body>
+	<!--cookies-->
+</body>
+<body>
+	<div class="wrapper">
+		<header>
+			<i class="bx bx-cookie"></i>
+			<h2>Cookies Consent</h2>
+		</header>
+
+		<div class="data">
+			<p>Ce site utilise des cookies strictement nécessaires pour améliorer votre visite et pour recueillir des statistiques de navigation.
+				<a href="#">
+					Lire plus...</a>
+			</p>
+		</div>
+
+		<div class="buttons">
+			<button class="button" id="acceptBtn">Accepter</button>
+			<button class="button" id="declineBtn">Refuser</button>
+		</div>
+	</div>
+</body>
+<!-- cookies end --></body><section class="banner-area relative">
+<div class="overlay overlay-bg"></div>
+<div class="container">
+	<div class="row fullscreen align-items-center justify-content-between">
+		<div class="col-lg-6 col-md-6 banner-left">
+			<h6 class="text-white"></h6>
+			<h1 class="text-white">Atypik House</h1>
+
+			<a href="produits" class="primary-btn text-uppercase">Commencez votre aveneture</a>
+		</div>
+		<div class="col-lg-4 col-md-6 banner-right">
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link active" id="flight-tab" data-toggle="tab" href="#flight" role="tab" aria-controls="flight" aria-selected="true">Recherche</a>
+				</li>
+
+			</ul>
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="flight" role="tabpanel" aria-labelledby="flight-tab">
+					<form class="form-wrap">
+
+
+						{{form(form)}}
+
+							<!--<a href="#" class="primary-btn text-uppercase">Rechercher</a>-->
+						</form>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End banner Area -->
+
+<!-- Start popular-destination  -->
+<section class="popular-destination-area section-gap">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="menu-content pb-70 col-lg-8">
+				<div class="title text-center">
+					<h1 class="mb-10">Popular Destinations</h1>
+					<h3>Atypik House vous propose ces meilleures destinations !</h3>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="single-destination relative">
+					<div class="thumb relative">
+						<div class="overlay overlay-bg"></div>
+						<img class="img-fluid" src="pro1.jpg" alt="">
+					</div>
+					<div class="desc">
+						<a href="produits" class="price-btn">$150</a>
+						<h4>Tiny house</h4>
+						<p>Paris</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="single-destination relative">
+					<div class="thumb relative">
+						<div class="overlay overlay-bg"></div>
+						<img class="img-fluid" src="pro2.jpg" alt="">
+					</div>
+					<div class="desc">
+						<a href="produits" class="price-btn">$250</a>
+						<h4>Tree house</h4>
+						<p>Strasbourg</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="single-destination relative">
+					<div class="thumb relative">
+						<div class="overlay overlay-bg"></div>
+						<img class="img-fluid" src="pro3.jpg" alt="">
+					</div>
+					<div class="desc">
+						<a href="produits" class="price-btn">$350</a>
+						<h4>Cabane</h4>
+						<p>Rennes</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End popular-destination Area -->
+
+
+<!-- Avis client -->
+<section class="testimonial-area section-gap">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="menu-content pb-70 col-lg-8">
+				<div class="title text-center">
+					<h1 class="mb-10">Avis de nos clients</h1>
+
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="active-testimonial">
+				<div class="single-testimonial item d-flex flex-row">
+					<div class="thumb">
+						<img class="img-fluid" src="img/elements/user1.png" alt="">
+					</div>
+					<div class="desc">
+						<p>
+							Do you want to be even more successful? Learn to love learning and growth. The more
+																																																																																																																																																																																																					effort you put into improving your skills, the bigger the payoff you.
+						</p>
+						<h4>Harriet Maxwell</h4>
+						<div class="star">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+						</div>
+					</div>
+				</div>
+				<div class="single-testimonial item d-flex flex-row">
+					<div class="thumb">
+						<img class="img-fluid" src="img/elements/user2.png" alt="">
+					</div>
+					<div class="desc">
+						<p>
+							A purpose is the eternal condition for success. Every former smoker can tell you just
+																																																																																																																																																																																																					how hard it is to stop smoking cigarettes. However.
+						</p>
+						<h4>Carolyn Craig</h4>
+						<div class="star">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+						</div>
+					</div>
+				</div>
+				<div class="single-testimonial item d-flex flex-row">
+					<div class="thumb">
+						<img class="img-fluid" src="img/elements/user1.png" alt="">
+					</div>
+					<div class="desc">
+						<p>
+							Do you want to be even more successful? Learn to love learning and growth. The more
+																																																																																																																																																																																																					effort you put into improving your skills, the bigger the payoff you.
+						</p>
+						<h4>Harriet Maxwell</h4>
+						<div class="star">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+						</div>
+					</div>
+				</div>
+				<div class="single-testimonial item d-flex flex-row">
+					<div class="thumb">
+						<img class="img-fluid" src="img/elements/user2.png" alt="">
+					</div>
+					<div class="desc">
+						<p>
+							A purpose is the eternal condition for success. Every former smoker can tell you just
+																																																																																																																																																																																																					how hard it is to stop smoking cigarettes. However.
+						</p>
+						<h4>Carolyn Craig</h4>
+						<div class="star">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+						</div>
+					</div>
+				</div>
+				<div class="single-testimonial item d-flex flex-row">
+					<div class="thumb">
+						<img class="img-fluid" src="img/elements/user1.png" alt="">
+					</div>
+					<div class="desc">
+						<p>
+							Do you want to be even more successful? Learn to love learning and growth. The more
+																																																																																																																																																																																																					effort you put into improving your skills, the bigger the payoff you.
+						</p>
+						<h4>Harriet Maxwell</h4>
+						<div class="star">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+						</div>
+					</div>
+				</div>
+				<div class="single-testimonial item d-flex flex-row">
+					<div class="thumb">
+						<img class="img-fluid" src="img/elements/user2.png" alt="">
+					</div>
+					<div class="desc">
+						<p>
+							A purpose is the eternal condition for success. Every former smoker can tell you just
+																																																																																																																																																																																																					how hard it is to stop smoking cigarettes. However.
+						</p>
+						<h4>Carolyn Craig</h4>
+						<div class="star">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<body>
+	<center>
+		<h1 style="color:#0e6e09;">
+			Ou se situe Atypik House ?
+		</h1>
+	</br>
+
+	<div>
+		<!-- Google Map  -->
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2599.279877912249!2d2.9714494155513083!3d49.34685107933832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e87d92ed9da84f%3A0x1cc5ce49af589d6c!2sAtypik%20House!5e0!3m2!1sfr!2sfr!4v1673697090754!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</div>
+</body></center></body><!-- Fin --><div class="form"></div><div class="ayman">{% for produit in produits %}
+
+<a href=" {{path('ap',{'id':produit.id})}}">
+	<img src={{asset(produit.photo)}} </a> {% endfor %} </div> {% endblock %}

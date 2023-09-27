@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!
+{% endblock %}
+
+{% block body %}
+	<section class="about-banner relative">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1 class="text-white">
+						CONNECTION
+					</h1>
+					<p class="text-white link-nav">
+						<a>ACCUEIL
+						</a>
+						<span class="lnr lnr-arrow-right"></span>
+						<a>
+							CONNECTION</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<form method="post">
+		{% if error %}
+			<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+		{% endif %}
+
+		{% if app.user %}
+			<div class="mb-3">
+				You are logged in as
+				{{ app.user.userIdentifier }},
+				<a href="{{ path('app_logout') }}">Logout</a>
+			</div>
+		{% endif %}
+
+
+		<div id="container">
+			<form action="verification.php" method="POST">
+				<h1 class="h3 mb-3 font-weight-normal">CONNEXION
+				</h1>
+				<label for="inputEmail">Email</label>
+				<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+				<label for="inputPassword">Mot de passe</label>
+				<input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+				<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+
+				<div class="checkbox mb-3">
+					<label>
+						<input type="checkbox" name="_remember_me">
+						Se souvenir de moi
+					</label>
+				</div>
+
+
+				<button class="btn btn-lg btn-primary" type="submit">
+					Connexion
+				</button>
+
+			</form>
+		</div>
+	</form>
+
+
+</form>{% endblock %}
